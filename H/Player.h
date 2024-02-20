@@ -15,20 +15,18 @@ private:
 	bool jumping_Animation=false;
 	bool on_Air_Jumping;
 	bool on_Air_Falling;
-<<<<<<< HEAD
+
 	bool Idle=true;
-=======
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
+
+
 	FloatRect r1= spr.getGlobalBounds();
 	
 public:
 	Player();
 	void Update(bool on_Air, bool collide_With_wall_left,bool collide_With_wall_right);
 	string Animation ();
-<<<<<<< HEAD
-	Vector2f getVelocity();
-=======
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
+Vector2f getVelocity();
+
 	
 };	
 

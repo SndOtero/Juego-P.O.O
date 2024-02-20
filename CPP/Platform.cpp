@@ -3,9 +3,8 @@
 ///Aca hay que hacerlo con puntero
 ///Podemos hacer que apraezcan con un timer
 Platform::Platform() {
-<<<<<<< HEAD
 	cant_bloq_plat_y = 3;
-	cant_bloq_plat = 24; /// maximo 32 = 16*2 =8*4 : es decir 4 plataformas prediseï¿½as mostrandose todo el tiempo
+	cant_bloq_plat = 24; /// maximo 32 = 16*2 =8*4 : es decir 4 plataformas prediseñas mostrandose todo el tiempo
 	
 	Plat0.resize(16);
 	Plat1.resize(cant_bloq_plat);
@@ -13,19 +12,13 @@ Platform::Platform() {
 	
 	string Name4="./Textures/Tierra.png";
 	/*for(int i=0;i<cant_bloq_plat;i++) { 
-=======
-	cant_plat = 6;
-	Plat1.resize(cant_plat);
-	for(int i=0;i<cant_plat;i++) { 
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
-		string Name1="./Textures/Tierra";
-		string Name2=to_string(1);
-		string Name3=".png";
-		string Name4=Name1+Name3;
-<<<<<<< HEAD
-		//Plat0[i].Init(Name4,i,8);
-		Plat1[i].Init(Name4,i);
-		//Plat2[i].Init(Name4,i,6);
+	string Name1="./Textures/Tierra";
+	string Name2=to_string(1);
+	string Name3=".png";
+	string Name4=Name1+Name3;
+	//Plat0[i].Init(Name4,i,8);
+	Plat1[i].Init(Name4,i);
+	//Plat2[i].Init(Name4,i,6);
 	}*/
 	Texture textu;
 	textu.loadFromFile(Name4);
@@ -52,10 +45,10 @@ Platform::Platform() {
 void Platform::Update(Vector2f Velocity){
 	/*
 	for(int i=0;i<cant_bloq_plat;i++) { 
-		Plat0[i].Update( 3 ); /// Velocidad (speed = -1* 3)
-		Plat1[i].Update( 3 ); /// Velocidad (speed = -1* 3)
-		Plat2[i].Update( 3 ); /// Velocidad (speed = -1* 3)
-	}*/
+	Plat0[i].Update( 3 ); /// Velocidad (speed = -1* 3)
+	Plat1[i].Update( 3 ); /// Velocidad (speed = -1* 3)
+	Plat2[i].Update( 3 ); /// Velocidad (speed = -1* 3)
+}*/
 	if(Velocity.x==0){
 		Velocity.x=2;
 	}
@@ -66,7 +59,7 @@ void Platform::Update(Vector2f Velocity){
 				Plat0[i].Update( Velocity.x ); /// Velocidad (speed = -1* 3)
 				break;
 			case 1:
-				Plat1[i].Update( Velocity.x); /// Velocidad (speed = -1* 3)
+				Plat1[i].Update( Velocity.x ); /// Velocidad (speed = -1* 3)
 				break;
 			case 2:
 				Plat2[i].Update( Velocity.x ); /// Velocidad (speed = -1* 3)
@@ -75,20 +68,11 @@ void Platform::Update(Vector2f Velocity){
 				Plat1[i].Update( Velocity.x); /// Velocidad (speed = -1* 3)
 			}
 		}
-=======
-		Plat1[i].Init(Name4,i,1);
-	}
-}
-void Platform::Update(){
-	for(int i=0;i<cant_plat;i++) { 
-		Plat1[i].Update( 3 ); /// Ver
-		
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
 	}
 }
 /*
 Bloque Platform::getBloq(int i){
-	return Plat1[i];
+return Plat1[i];
 }*/
 Bloque Platform::getBloq(int i, int num_bloq_y){
 	switch(num_bloq_y){
@@ -108,7 +92,6 @@ Bloque Platform::getBloq(int i, int num_bloq_y){
 }
 
 void Platform::Draw(RenderWindow & win){
-<<<<<<< HEAD
 	for(int j=0;j< cant_bloq_plat_y;j++) { 
 		for(int i=0;i<this->Get_cant_bloq_plat(j);i++) {
 			switch(j){
@@ -128,10 +111,10 @@ void Platform::Draw(RenderWindow & win){
 	}
 	/*
 	for(int i=0;i< cant_bloq_plat;i++) { 
-		Plat0[i].Draw(win);
-		Plat1[i].Draw(win);
-		Plat2[i].Draw(win);
-		
+	Plat0[i].Draw(win);
+	Plat1[i].Draw(win);
+	Plat2[i].Draw(win);
+	
 	}*/
 }
 int Platform::Get_cant_bloq_plat(int i){
@@ -151,13 +134,4 @@ int Platform::Get_cant_bloq_plat(int i){
 }
 int Platform::Get_cant_bloq_plat_y(){
 	return cant_bloq_plat_y;
-=======
-	for(int i=0;i< cant_plat;i++) { 
-		Plat1[i].Draw(win);
-		
-	}
-}
-int Platform::Get_Cant_Plat(){
-	return cant_plat;
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
 }

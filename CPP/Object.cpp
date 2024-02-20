@@ -12,46 +12,25 @@ Object::Object(string name) {
 void Object::Draw (RenderWindow& win ) {
 	win.draw(spr);
 }
-<<<<<<< HEAD
 bool Object::CollideUp(Object & O){
-=======
-bool Object::Collide(Object & O){
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
 	FloatRect r1= this->spr.getGlobalBounds();
 	FloatRect r2= O.spr.getGlobalBounds();
-
+	
 	if(r2.top+r2.height > r1.top && r2.left + r2.width > r1.left && r2.left  < r1.left+r1.width &&r2.top+r2.height < r1.top + 20){ //Calcula la interseccion solo con la parte de arriba del bloque
-
+		
 		
 		return true;
 	}
 	
-<<<<<<< HEAD
-			return false;
-=======
-	
-		
-			return false;
-	
-		
-	
-	
-
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
+	return false;
 }; 
 
 
 bool Object::CollideWithWallright(Object & O){
-<<<<<<< HEAD
 	FloatRect r1= this->spr.getGlobalBounds(); //r1 : bloq
 	FloatRect r2= O.spr.getGlobalBounds(); //r2 : player
 	if(r1.intersects(r2)&&r1.top+r1.height> r2.top+22){ //Si se intertan y el personaje esta mas abajo entonces devolver verdadero
-	//by Fran: //if(r1.intersects(r2)&&r1.left+r1.width> r2.left){ //Si se intertan y el personaje esta mas abajo entonces devolver verdadero
-=======
-	FloatRect r1= this->spr.getGlobalBounds();
-	FloatRect r2= O.spr.getGlobalBounds();
-	if(r1.intersects(r2)&&r2.top+r2.height> r1.top+22){ //Si se intertan y el personaje esta mas abajo entonces devolver verdadero
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
+		//by Fran: //if(r1.intersects(r2)&&r1.left+r1.width> r2.left){ //Si se intertan y el personaje esta mas abajo entonces devolver verdadero
 		return true;
 	}
 	
@@ -65,7 +44,6 @@ bool Object::CollideWithWallleft(Object & O){
 	}
 	return false;
 }
-<<<<<<< HEAD
 
 
 bool Object::Collide(Object & O){
@@ -75,5 +53,3 @@ bool Object::Collide(Object & O){
 	
 	return r1.intersects(r2);
 }; 
-=======
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb

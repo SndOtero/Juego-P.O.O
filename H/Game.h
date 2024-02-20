@@ -28,26 +28,23 @@ private:
 	bool collide_With_wall_right;
 	bool collide_With_wall_left;
 	
-<<<<<<< HEAD
 	///Vector2f worldspeed = {-0.5,0};  agregar despues
 	
 	//const float GridSize = 80.f;
 	
-=======
->>>>>>> 4e482defa54763e1e363dd7b5aa0a6e312fb7aeb
 	Vector2i resolutionWin;
 	
-public:
+	public:
 		
-	Game(int resolution_x, int resolution_y);
-	//Game(Vector2i resolutionWindows);
-	Game();
-	void run();
-	void update();
-	void draw();
-	void processEvent();
-
-	
+		Game(int resolution_x, int resolution_y);
+		//Game(Vector2i resolutionWindows);
+		Game();
+		void run();
+		void update();
+		void draw();
+		void processEvent();
+		
+		
 };
 
 #endif
